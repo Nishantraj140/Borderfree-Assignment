@@ -14,7 +14,7 @@ export class Border extends Component {
       componentDidMount(){
         axios.get(`/queryfunction`)
         .then((response) => {
-            console.log(JSON.parse(response.data.body));
+          console.log(response.data.body);
             console.log(JSON.parse(response.data.body)["datarows"]);
             this.setState({
                 dataList : JSON.parse(response.data.body)["datarows"]
